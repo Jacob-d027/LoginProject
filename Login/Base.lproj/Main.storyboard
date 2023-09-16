@@ -29,11 +29,17 @@
                                 <rect key="frame" x="16.666666666666671" y="483.66666666666669" width="165" height="35.000000000000057"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Username?"/>
+                                <connections>
+                                    <action selector="forgotUsernameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfp-NN-2GO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCV-ac-p15">
                                 <rect key="frame" x="216.66666666666663" y="483.66666666666669" width="160" height="35.000000000000057"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="orR-3c-mrs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szF-0K-ywN">
                                 <rect key="frame" x="161" y="408.66666666666669" width="71" height="35"/>
@@ -74,10 +80,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hRl-bj-eD3"/>
+                    <connections>
+                        <outlet property="forgotPasswordButton" destination="BCV-ac-p15" id="rsy-Ix-hFI"/>
+                        <outlet property="forgotUserNameButton" destination="F6G-tb-APr" id="aUl-FU-g9V"/>
+                        <outlet property="userNameTextField" destination="Zcj-K2-aKA" id="Xdd-xP-JB0"/>
+                        <segue destination="Aza-rZ-W3S" kind="show" identifier="ForgottenUsernameOrPassword" id="R8v-5u-gVk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011.4503816793892" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="961" y="5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GaQ-cL-KWn">
@@ -89,7 +101,7 @@
                         <viewLayoutGuide key="safeArea" id="u04-jJ-gnx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ueR-JU-BMK"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="ueR-JU-BMK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUb-J4-7aJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,6 +126,9 @@
             <point key="canvasLocation" x="84.732824427480907" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="R8v-5u-gVk"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
